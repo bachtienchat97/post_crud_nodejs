@@ -4,7 +4,6 @@ const router = express.Router();
 //load model
 const Post = require('../model/Post');
 
-
 //display all posts
 router.get('/', async (req,res) => {
   const posts = await Post.find().lean().sort({date: -1})
